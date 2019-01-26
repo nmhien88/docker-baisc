@@ -1,14 +1,12 @@
 FROM centos:7
 MAINTAINER nmhien889@gmail.com
 RUN yum clean all
-RUN sudo yum -y update
-RUN sudo yum -y install httpd
+RUN yum -y update
+RUN yum -y install httpd
 
 WORKDIR /myenv
 COPY run.sh /myenv
 RUN chmod a+x /myenv/*
-
-CMD /bin/bash
 
 ENTRYPOINT [ "/myenv/run.sh" ]
 
