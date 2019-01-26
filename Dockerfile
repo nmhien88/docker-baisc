@@ -5,7 +5,6 @@ RUN yum -y update
 RUN yum -y install httpd
  
 RUN yum -y install epel-release
-RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 RUN yum -y install php56w-fpm php56w-opcache php56w-common
 
 WORKDIR /myenv
