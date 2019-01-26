@@ -8,6 +8,8 @@ WORKDIR /myenv
 COPY run.sh /myenv
 RUN chmod a+x /myenv/*
 
+CMD /bin/bash
+
 ENTRYPOINT [ "/myenv/run.sh" ]
 
 EXPOSE 80
