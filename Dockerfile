@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7.0.1406
 MAINTAINER nmhien889@gmail.com
 RUN yum clean all
 RUN yum -y update
